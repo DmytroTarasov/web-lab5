@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Тарасов Д.С. група ІТ-91 Варіант 8</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <form id="info-form" novalidate>
+
+            <h2 class="form-header">Форма для заповнення</h2>
+                <input 
+                    class="form-field" 
+                    type="text" 
+                    id="fullname" 
+                    name="fullname" 
+                    placeholder="ПІБ" 
+                    required
+                    pattern="[а-яґєіїА-ЯҐЄІЇ]+ [а-яґєіїА-ЯҐЄІЇ][.][а-яґєіїА-ЯҐЄІЇ][.]"
+                    />
+                <span class="error"></span>
+                <input 
+                    class="form-field" 
+                    type="text" 
+                    id="group" 
+                    name="group" 
+                    placeholder="Група" 
+                    required
+                    pattern="[а-яґєіїА-ЯҐЄІЇ]{2}-\d{2}"
+                    />
+                <span class="error"></span>
+                <input 
+                    class="form-field" 
+                    type="text" 
+                    id="id-card" 
+                    name="id-card"
+                    placeholder="ID-картка" 
+                    required
+                    pattern="[а-яґєіїА-ЯҐЄІЇ]{2} №\d{6}"
+                    />
+                <span class="error"></span>
+                <input 
+                    class="form-field" 
+                    type="text" 
+                    id="birthdate" 
+                    name="birthdate" 
+                    placeholder="Дата народження"
+                    required
+                    pattern="\d{2}[.]\d{2}[.]\d{4}" />
+                <span class="error"></span>
+                <input 
+                    class="form-field" 
+                    type="text" 
+                    id="email" 
+                    name="email" 
+                    placeholder="Пошта"
+                    required
+                    pattern="\w+@\w+[.]com" />
+                <span class="error"></span>
+
+            <button class="form-button" type="submit" disabled>Підтвердити</button>
+        </form>
+
+        <input type="color" id="colorpicker" value="#000000">
+        <table class="table">
+        </table>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
